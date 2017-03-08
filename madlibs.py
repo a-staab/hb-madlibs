@@ -42,6 +42,7 @@ def greet_person():
 @app.route('/game')
 def show_madlib_form():
     """Gets user's answer whether they would like to play a
+    game and, depending whether yes or no, directs them to a goodbye page or the
     game.
     """
 
@@ -60,13 +61,18 @@ def show_madlib():
     mad_name = request.args.get("person")
     mad_color = request.args.get("color")
     mad_noun = request.args.get("noun")
-    mad_adjective = request.args.get("adjective")
+    mad_planet = request.args.get("planet")
+    mad_adverb = request.args.get("adverb")
+    mad_adjectives = request.args.getlist("adjectives")
 
     return render_template("madlib.html",
                            person=mad_name,
                            color=mad_color,
                            noun=mad_noun,
-                           adjective=mad_adjective)
+                           planet=mad_planet,
+                           adverb=mad_adverb,
+                           adjectives=mad_adjectives,
+                           )
 
 
 if __name__ == '__main__':

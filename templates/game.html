@@ -4,12 +4,26 @@
   <title>Madlibs</title>
 </head>
 <body>
-  <form action="http://localhost:5000/madlib">
+  <form action="/madlib">
     Enter a name <input type="text" name="person"><br><br>
     Enter a color <input type="text" name="color"><br><br>
     Enter a noun <input type="text" name="noun"><br><br>
-    Enter an adjective <input type="text" name="adjective"><br><br>
-    <input type="submit">
+    Choose a planet 
+    <input type="radio" name="planet" value="earth"> Earth
+    <input type="radio" name="planet" value="mars"> Mars<br><br>
+    Choose an adverb
+    <select name="adverb">
+      <option value="sanctimoniously">sanctimoniously</option>
+      <option value="ponderously">ponderously</option>
+      <option value="obstreperously">obstreperously</option>
+    </select><br><br>
+    Choose some adjectives
+    <input type="checkbox" name="adjectives" value="fabulous"> fabulous
+    <input type="checkbox" name="adjectives" value="shiny"> shiny
+    <input type="checkbox" name="adjectives" value="miraculous"> 
+      miraculous 
+    <br><br>
+    <input type="submit" value="Submit"> 
   </form>
 </body>
 </html>

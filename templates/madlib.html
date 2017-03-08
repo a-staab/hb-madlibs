@@ -4,8 +4,12 @@
     <title></title>
 </head>
 <body>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. 
-    When {{ person }} went to pick it up, it burst into flames in a totally
-    {{ adjective }} way.
+    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab on planet {{ planet }}. <br>
+    When {{ person }} went to pick it up, it burst into flames in a 
+    {{ adverb }} {% for adjective in adjectives %}
+                {{ adjective }}
+            {% endfor %} way.
+
+
 </body>
 </html>

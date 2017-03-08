@@ -6,10 +6,10 @@
 <body>
     Hi {{ person }}! I think you're {{ compliment }}!<br>
     Would you like to play a game?
-    <form action="http://localhost:5000/game">
+    <form action="/game" method="GET">
         <input type="radio" name="game-choice" value="Yes"> Yes
         <input type="radio" name="game-choice" value="No"> No 
-        <input type="submit">
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
